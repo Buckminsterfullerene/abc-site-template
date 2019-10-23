@@ -1,0 +1,15 @@
+.img-responsive {
+  height: 75px;
+}
+.usa-navbar {
+  padding-top: 10px;
+}
+@media (max-width: 63.99em) {
+  .img-responsive {
+    height: 48px;
+  }
+  .usa-navbar {
+    padding-top: 0;
+  }
+}
+
