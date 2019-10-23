@@ -1,0 +1,35 @@
+app-spinner {
+  .widget-spinner-container{
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    &.backdrop-dark {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+    .widget-content{
+      position: absolute; /* Sit on top of the page content */
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1030; /* Specify a stack order in case you're using a different order for other elements */
+      text-align: center;
+      display: flex; // make us of Flexbox
+      align-items: center; // does vertically center the desired content
+      justify-content: center; // horizontally centers single line items
+    }
+
+    .loading-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 1000;
+      font-size: 20px;
+      margin-left: -32px;
+      margin-top: 16px;
+    }
+  }
+}

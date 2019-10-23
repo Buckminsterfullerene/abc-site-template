@@ -1,1 +1,13 @@
-
+<div class="widget-spinner-container"
+     [ngClass]="{'backdrop-dark': allowBackdropColor}"
+     *ngIf="showWidgetSpinner"
+     role="dialog">
+  <div class="widget-content">
+    <div class="loading-overlay" role="document">
+      <span class="fas fa-spinner fa-5x fa-pulse"></span>
+    </div>
+    <a id="spinnerAnchor" href="javascript:void(0)" tabindex="0">
+      <span class="sr-only"> {{loadingText}} &hellip;</span>
+    </a>
+  </div>
+</div>
