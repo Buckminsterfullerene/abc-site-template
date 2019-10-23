@@ -1,1 +1,51 @@
+<div class="grid-row grid-gap" style="padding-top:20px;">
+  <aside class="usa-layout-docs__sidenav desktop:grid-col-3">
+    <nav>
+      <ul class="usa-sidenav">
+        <li class="usa-sidenav__item">
+          <a class="nav-link"
+             [routerLink]="['/charts', 'pie']"
+             [ngClass]="{'usa-current': (chartType === 'pie')}">Pie</a></li>
+        <li class="usa-sidenav__item">
+          <a class="nav-link"
+             [routerLink]="['/charts', 'singleColumn']"
+             [ngClass]="{'usa-current': (chartType === 'singleColumn')}">Single Column Bar Chart</a></li>
+        <li class="usa-sidenav__item">
+          <a class="nav-link"
+             [routerLink]="['/charts', 'multiColumn']"
+             [ngClass]="{'usa-current': (chartType === 'multiColumn')}">Multi-Column Bar Chart</a></li>
+        <li class="usa-sidenav__item">
+          <a class="nav-link"
+             [routerLink]="['/charts', 'stackedColumn']"
+             [ngClass]="{'usa-current': (chartType === 'stackedColumn')}">Stacked Column Bar Chart</a></li>
+        <li class="usa-sidenav__item">
+          <a class="nav-link"
+             [routerLink]="['/charts', 'basicArea']"
+             [ngClass]="{'usa-current': (chartType === 'basicArea')}">Basic Area Chart</a>
+        </li>
+        <li class="usa-sidenav__item">
+          <a class="nav-link"
+             [routerLink]="['/charts', 'basicLine']"
+             [ngClass]="{'usa-current': (chartType === 'basicLine')}">Basic Line Chart</a>
+        </li>
+      </ul>
+    </nav>
+  </aside>
 
+
+  <div class="usa-layout-docs__main desktop:grid-col-9 usa-prose">
+    <h2>Charts</h2>
+
+    <ng-container *ngIf="chartModel">
+      <google-chart #chart
+                    [title]="chartModel.title"
+                    [type]="chartModel.type"
+                    [data]="chartModel.data"
+                    [columnNames]="chartModel.columnNames"
+                    [options]="chartModel.options"
+                    [width]="chartModel.width"
+                    [height]="chartModel.height">
+      </google-chart>
+    </ng-container>
+  </div>
+</div>
