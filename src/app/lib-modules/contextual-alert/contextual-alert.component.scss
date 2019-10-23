@@ -1,0 +1,23 @@
+app-contextual-alert {
+  .contextual-alert-close {
+    -moz-osx-font-smoothing: auto;
+    -webkit-font-smoothing: subpixel-antialiased;
+    color: #005ea2;
+    text-decoration: underline;
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    height: 3rem;
+    width: 3rem;
+    color: currentColor;
+    flex: none;
+    float: right;
+    margin: -0.75rem -1rem 1rem auto;
+    text-align: center;
+  }
+}

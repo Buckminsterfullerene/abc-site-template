@@ -1,1 +1,38 @@
+<div class="usa-alert" [ngClass]="cntxtMsg.type" *ngIf="cntxtMsg.show">
+  <button class="contextual-alert-close" (click)="cntxtMsg.show = false"><img  src="../../assets/images/close.svg" alt="close"></button>
+  <div class="usa-alert__body">
+    <!--<h3 class="usa-alert__heading">Success status</h3>-->
+    <p class="usa-alert__text"><span [innerHTML]="cntxtMsg.message"></span></p>
+  </div>
+</div>
 
+
+
+
+<!-- ***************
+CONTEXTUAL ALERT TEMPLATE
+Use this template if you need to manually insert an alert.
+
+*  Use the appropriate alert here:
+  - alert-success
+  - alert-warning
+  - alert-success
+  - alert-info
+
+*  The first span is the alert icon.
+*  The second span is your message: tex or HTML.
+*  The button is the close button only if you need it.
+
+
+<p class="alert alert-success contextual-msg" role="alert">
+  <span class="icon alert-icon alert-icon-success"></span>
+  <span class="msg-text">
+    message here.....
+  </span>
+
+  <button type="button" class="close">
+    <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+  </button>
+</p>
+
+*************** -->
