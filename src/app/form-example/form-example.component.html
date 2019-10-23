@@ -1,1 +1,27 @@
+<div class="preview usa-prose site-prose ">
+  <form class="usa-form">
+    <fieldset class="usa-fieldset">
+      <legend class="usa-legend">Contact name form</legend>
+      <app-contextual-alert
+        [parentWidget]="parentElementValue"
+        [contextMsgModal]="contextualAlertModel">
+      </app-contextual-alert>
+      <label class="usa-label" for="title">Title <span class="usa-hint">(optional)</span></label>
+      <input class="usa-input usa-input--small" id="title" name="title" type="text">
 
+      <label class="usa-label" for="first-name">First name</label>
+      <input class="usa-input" id="first-name" name="first-name" type="text" required="" aria-required="true">
+
+      <label class="usa-label" for="middle-name">Middle name <span class="usa-hint">(optional)</span></label>
+      <input class="usa-input" id="middle-name" name="middle-name" type="text">
+
+      <label class="usa-label" for="last-name">Last name</label>
+      <input class="usa-input" id="last-name" name="last-name" type="text" required="" aria-required="true">
+
+      <button class="usa-button" type="button" (click)="showGlobalError()">Show error</button>
+      <button class="usa-button  usa-button--outline" type="button" (click)="showSuccess()">Show Success</button>
+      <button class="usa-button usa-button--outline" type="button" (click)="showInfo()">Show info</button>
+      <button class="usa-button usa-button--outline" type="button" (click)="showWarning()">Show Warning</button>
+    </fieldset>
+  </form>
+</div>
